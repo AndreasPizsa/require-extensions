@@ -1,7 +1,7 @@
 {
   "name": "require-extensions",
-  "version": "0.0.1",
-  "description": "Get `require.extensions` as glob pattern or regular expression, eg. `{.js,.coffee}` or `/(?:\\.js|\\.coffee)/` to find all executable file types (such as coffeescript), not just .js",
+  "version": "0.0.2",
+  "description": "Get the extensions of executable file names as glob pattern or regular expression",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"

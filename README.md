@@ -1,17 +1,17 @@
 require-extensions
 ==================
 
-> Get executable file extensions as glob pattern or regular expression
+> Get the extensions of executable file names as glob pattern or regular expression
 
 ![Travis](https://img.shields.io/travis/AndreasPizsa/require-extensions.svg?style=flat-square)
 ![Downloads](https://img.shields.io/npm/dm/require-extensions.svg?style=flat-square)
 
 # Motivation
-Many libraries use a hardcoded `.js` pattern to load executable code such as plugins. This can be easily improved to incude other file types such as `.coffee`, `.litcoffee` and others by using the standard `require.extensions` property, which returns an array of file extensions.
+Many libraries use a hardcoded `.js` string to discover executable file names, unfortunately leaving out other extensions that contain executable code such as `.coffee`, `.litcoffee`, and potentially others that are accessible through Node’s `require.extensions` property. By making this property accessible as a glob pattern and regular expression, it will become easier to use it as a search pattern and load code that was written in other languages or dialects.
 
 This module introduces
 + `require.extensions.glob`, eg. `{.js,.coffee}`
-+ `require.extensions.regexp`, eg. `/(?:\.js|\.coffee)/` 
++ `require.extensions.regexp`, eg. `/(?:\.js|\.coffee)/`
 
 # Install
 ```bash
