@@ -4,7 +4,7 @@
   "description": "Get `require.extensions` as glob pattern or regular expression, eg. `{.js,.coffee}` or `/(?:\.js|\.coffee)/` to find all executable file types (such as coffeescript), not just .js",
   "main": "index.js",
   "scripts": {
-    "test": "node ."
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,15 @@
     "literate",
     "pattern",
     "glob",
+    "find",
+    "file",
+    "file name",
+    "filename",
+    "execute",
     "executable",
-    "code"
+    "code",
+    "extensions",
+    "extension"
   ],
   "author": "Andreas Pizsa (https://github.com/AndreasPizsa)",
   "license": "MIT"
