@@ -1,3 +1,5 @@
+/.idea
+/require-extensions.iml
 # Logs
 logs
 *.log

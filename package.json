@@ -1,10 +1,10 @@
 {
   "name": "require-extensions",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get the extensions of executable file names as glob pattern or regular expression",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,13 @@
     "extension"
   ],
   "author": "Andreas Pizsa (https://github.com/AndreasPizsa)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "coveralls": "^2.11.6",
+    "is-valid-glob": "^0.3.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4",
+    "mocha-lcov-reporter": "^1.0.0",
+    "verb-cli": "^0.7.4"
+  }
 }

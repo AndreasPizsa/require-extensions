@@ -1,30 +1,53 @@
 /**
-  Function wrapper for `require.extensions`
-*/
-module.exports = function require_extensions()
+ * Return an array of valid extensions, eg. ['.js','.json','.node']
+ *
+ * @api public
+ */
+function require_extensions()
 {
-  return require.extensions;
-};
+  return Object.keys(require.extensions);
+}
+
+module.exports = require_extensions;
 
 /**
-  return a glob pattern for `require.extensions`
-*/
-module.exports.glob = function require_extensions_glob()
+ * return a glob pattern for `require.extensions`
+ *
+ * @api public
+ */
+function glob()
 {
   return '{'+require_extensions().join(',')+'}';
-};
+}
+module.exports.glob = glob;
 
 /**
-  return a `RegExp` for `require.extensions`
-*/
-module.exports.regexp = function require_extensions_regexp(group)
+ * return a new `RegExp` object that matches `require.extensions`
+ *
+ * @api public
+ */
+function regexp(group)
 {
-  return new RegExp(
-    '(' + (group ? '' : '?:') + require_extensions()
-    .map(function(ext){ return '\\'+ext; })
-    .join('|') +
-    ')' );
-};
+  return new RegExp(regexp_string(group)+'$');
+}
+
+module.exports.regexp = regexp;
+
+
+/**
+ * return a new `String` regular expression that matches `require.extensions`
+ *
+ * @api public
+ */
+function regexp_string(group)
+{
+  return '(' + (group ? '' : '?:') + (require_extensions()
+            .map(function(ext){ return '\\'+ext; })
+            .join('|')) +
+        ')'
+}
+
+module.exports.regexp.string = regexp_string;
 
 Object.defineProperty(require.extensions,'glob',{
   enumerable: false,
@@ -35,21 +58,3 @@ Object.defineProperty(require.extensions,'regexp',{
   enumerable: false,
   get: module.exports.regexp
 });
-
-if(process.mainModule === module) {
-  var assert = require('assert');
-  require_extensions = function() { return ['.js','.coffee']; };
-
-  assert.equal('{.js,.coffee}',module.exports.glob());
-
-  assert.equal(true,module.exports.regexp().test('index.js'));
-  assert.equal(true,module.exports.regexp().test('index.coffee'));
-  assert.equal(false,module.exports.regexp().test('index.c'));
-  // with Regexp group
-  assert.equal('.js','index.js'.match(module.exports.regexp(true))[1]);
-  assert.equal('.coffee','index.coffee'.match(module.exports.regexp(true))[1]);
-  assert.equal(null,'index.c'.match(module.exports.regexp(true)));
-
-  // Properties
-  assert.equal(true,require.extensions.regexp.test('index.js'));
-}
