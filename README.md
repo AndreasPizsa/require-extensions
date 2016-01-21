@@ -1,4 +1,4 @@
-# require-extensions ![Travis](https://img.shields.io/travis/AndreasPizsa/require-extensions.svg?style=flat-square) ![Downloads](https://img.shields.io/npm/dm/require-extensions.svg?style=flat-square) %}
+# require-extensions ![Travis](https://img.shields.io/travis/AndreasPizsa/require-extensions.svg?style=flat-square) ![Downloads](https://img.shields.io/npm/dm/require-extensions.svg?style=flat-square)
 
 > Get the extensions of executable file names as glob pattern or regular expression
 
