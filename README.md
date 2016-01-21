@@ -1,4 +1,4 @@
-# require-extensions [![NPM version](https://badge.fury.io/js/require-extensions.svg)](http://badge.fury.io/js/require-extensions)  [![Build Status](https://travis-ci.org/andreaspizsa/require-extensions.svg)](https://travis-ci.org/andreaspizsa/require-extensions)
+# require-extensions ![Travis](https://img.shields.io/travis/AndreasPizsa/require-extensions.svg?style=flat-square) ![Downloads](https://img.shields.io/npm/dm/require-extensions.svg?style=flat-square) %}
 
 > Get the extensions of executable file names as glob pattern or regular expression
 
@@ -40,9 +40,6 @@ return a new `RegExp` object that matches `require.extensions`
 ### [regexp_string](index.js#L43)
 
 return a new `String` regular expression that matches `require.extensions`
-
-[![Travis](https://img.shields.io/travis/AndreasPizsa/require-extensions.svg?style=flat-square)](https://www.npmjs.com/)
-[![Downloads](https://img.shields.io/npm/dm/require-extensions.svg?style=flat-square)](index.js#L19)
 
 ## Motivation
 
