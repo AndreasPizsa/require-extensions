@@ -1,0 +1,6 @@
+{
+  "curly" : false,
+  "nonbsp"  : true,
+  "notypeof": true,
+  "esversion" : 6
+}
