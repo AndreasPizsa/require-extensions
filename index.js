@@ -17,7 +17,13 @@ module.exports = require_extensions;
  */
 function glob()
 {
-  return '{'+require_extensions().join(',')+'}';
+  return '.{'+
+    require_extensions()
+    .map(function(ext) {
+      return ext.substr(1)
+    })
+    .join(',')
+  +'}';
 }
 module.exports.glob = glob;
 

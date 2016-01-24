@@ -1,6 +1,6 @@
 {
   "name": "require-extensions",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Get the extensions of executable file names as glob pattern or regular expression",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "github:AndreasPizsa/require-extensions"
   },
-  "publishConfig" : {
-    "registry" : "http://registry.npmjs.org"
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
   },
   "keywords": [
     "require",
@@ -36,6 +36,7 @@
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^2.11.6",
+    "glob-fs": "^0.1.6",
     "is-valid-glob": "^0.3.0",
     "istanbul": "^0.4.2",
     "mocha": "^2.3.4",
