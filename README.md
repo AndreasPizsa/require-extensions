@@ -20,7 +20,7 @@ require.extensions.regexp.string    // -> '(?:\.js|\.coffee)'
 require('require-extensions');
 
 var glob = require('glob');
-var files = glob.sync("plugins/*." + require.extensions.glob);
+var files = glob.sync("plugins/*" + require.extensions.glob);
 // -> ['plugins/thisfile.js', 'plugins/thatfile.coffee', 'plugins/thisfile.litcoffee']
 
 files[0].match(require.extensions.regexp);
