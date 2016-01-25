@@ -11,9 +11,9 @@ $ npm i require-extensions --save
 ## Usage
 
 ```javascript
-require.extensions.glob             // -> {.js,.coffee}
-require.extensions.regexp           // -> /(?:\.js|\.coffee)/
-require.extensions.regexp.string    // -> '(?:\.js|\.coffee)'
+require.extensions.glob             // -> '.{js,coffee}'      (String)
+require.extensions.regexp           // -> /(?:\.js|\.coffee)/ (RegExp)
+require.extensions.regexp_string    // -> '(?:\.js|\.coffee)' (String)
 ```
 
 ```javascript
