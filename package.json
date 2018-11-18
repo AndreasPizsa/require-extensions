@@ -35,11 +35,11 @@
   "author": "Andreas Pizsa (https://github.com/AndreasPizsa)",
   "license": "MIT",
   "devDependencies": {
-    "coveralls": "^2.11.6",
+    "coveralls": "^3.0.2",
     "glob-fs": "^0.1.6",
-    "is-valid-glob": "^0.3.0",
+    "is-valid-glob": "^1.0.0",
     "istanbul": "^0.4.2",
-    "mocha": "^2.3.4",
+    "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.0.0",
     "verb-cli": "^0.7.4"
   }
