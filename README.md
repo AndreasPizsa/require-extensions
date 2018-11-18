@@ -1,5 +1,7 @@
 # require-extensions ![Travis](https://img.shields.io/travis/AndreasPizsa/require-extensions.svg?style=flat-square) ![Coverage Status](https://img.shields.io/coveralls/AndreasPizsa/require-extensions.svg?style=flat-square) ![Downloads](https://img.shields.io/npm/dm/require-extensions.svg?style=flat-square)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AndreasPizsa/require-extensions.svg)](https://greenkeeper.io/)
+
 > Get the extensions of executable file names as glob pattern or regular expression
 
 Install with [npm](https://www.npmjs.com/)
